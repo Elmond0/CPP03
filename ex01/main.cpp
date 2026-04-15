@@ -6,7 +6,7 @@
 /*   By: elmondo <elmondo@student.42firenze.it>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 16:47:46 by elmondo           #+#    #+#             */
-/*   Updated: 2026/04/07 16:47:47 by elmondo          ###   ########.fr       */
+/*   Updated: 2026/04/15 11:07:40 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int main(void)
 	ClapTrap a("Clappy");
 	ScavTrap b("Scavvy");
 	ScavTrap c(b);
+	ClapTrap d("Delta");
+	d = a;
 
 	std::cout << std::endl
 			  << "=== ClapTrap actions ===" << std::endl;
@@ -33,6 +35,13 @@ int main(void)
 	b.takeDamage(40);
 	b.beRepaired(15);
 	b.guardGate();
+
+	std::cout << std::endl
+
+			  << "=== Energy drain ===" << std::endl;
+	for (int i = 0; i < 50; i++)
+		b.attack("target");
+	b.beRepaired(1);
 
 	std::cout << std::endl
 			  << "=== Copy ScavTrap actions ===" << std::endl;

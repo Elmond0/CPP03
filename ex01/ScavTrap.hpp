@@ -6,7 +6,7 @@
 /*   By: elmondo <elmondo@student.42firenze.it>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 16:47:52 by elmondo           #+#    #+#             */
-/*   Updated: 2026/04/07 16:47:53 by elmondo          ###   ########.fr       */
+/*   Updated: 2026/04/15 11:36:16 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ public:
 	ScavTrap &operator=(const ScavTrap &other);
 	~ScavTrap();
 
-	void attack(const std::string &target);
 	void guardGate(void);
 };
 
