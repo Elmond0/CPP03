@@ -6,7 +6,7 @@
 /*   By: elmondo <elmondo@student.42firenze.it>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 16:48:01 by elmondo           #+#    #+#             */
-/*   Updated: 2026/04/18 11:04:32 by elmondo          ###   ########.fr       */
+/*   Updated: 2026/04/18 11:08:19 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int main(void)
 	c.beRepaired(1);
 
 	std::cout << std::endl
-			  << "=== Copy ScavTrap actions ===" << std::endl;
+			  << "=== Copy FragTrap actions ===" << std::endl;
 	e.attack("enemy");
 	e.takeDamage(90);
 	e.beRepaired(5);
