@@ -6,7 +6,7 @@
 /*   By: elmondo <elmondo@student.42firenze.it>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 16:48:01 by elmondo           #+#    #+#             */
-/*   Updated: 2026/04/07 16:48:02 by elmondo          ###   ########.fr       */
+/*   Updated: 2026/04/18 11:04:32 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,17 @@ int main(void)
 	ClapTrap a("Clappy");
 	ScavTrap b("Scavvy");
 	FragTrap c("Fraggy");
+	FragTrap e(c);
+	ClapTrap d("Delta");
+	d = a;
 
 	std::cout << std::endl
 			  << "=== ClapTrap ===" << std::endl;
 	a.attack("target");
 	a.takeDamage(8);
 	a.beRepaired(3);
+	a.takeDamage(10);
+	a.attack("target");
 
 	std::cout << std::endl
 			  << "=== ScavTrap ===" << std::endl;
@@ -41,10 +46,18 @@ int main(void)
 	c.highFivesGuys();
 
 	std::cout << std::endl
-			  << "=== FragTrap death ===" << std::endl;
-	c.takeDamage(80);
-	c.attack("target");
-	c.beRepaired(5);
+			  << "=== Energy drain ===" << std::endl;
+	for (int i = 0; i < 100; i++)
+		c.attack("target");
+	c.beRepaired(1);
+
+	std::cout << std::endl
+			  << "=== Copy ScavTrap actions ===" << std::endl;
+	e.attack("enemy");
+	e.takeDamage(90);
+	e.beRepaired(5);
+	e.takeDamage(50);
+	e.attack("enemy");
 
 	std::cout << std::endl
 			  << "=== Destruction chaining (reverse order) ===" << std::endl;

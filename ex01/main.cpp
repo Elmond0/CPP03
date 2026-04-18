@@ -6,7 +6,7 @@
 /*   By: elmondo <elmondo@student.42firenze.it>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 16:47:46 by elmondo           #+#    #+#             */
-/*   Updated: 2026/04/15 11:07:40 by elmondo          ###   ########.fr       */
+/*   Updated: 2026/04/18 11:04:25 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(void)
 
 	std::cout << std::endl
 			  << "=== ScavTrap actions ===" << std::endl;
-	b.attack("enemy");
+	b.attack("target");
 	b.takeDamage(40);
 	b.beRepaired(15);
 	b.guardGate();
